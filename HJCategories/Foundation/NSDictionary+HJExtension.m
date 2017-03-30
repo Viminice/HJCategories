@@ -191,6 +191,23 @@
     return [parser result];
 }
 
+- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
+    NSMutableString *string = [NSMutableString string];
+    [string appendString:@"\n{\n"];
+    [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        [string appendFormat:@"\t%@",key];
+        [string appendFormat:@":%@,",obj];
+        [string appendString:@"\n"];
+    }];
+    [string appendString:@"}"];
+    //删除字典中最后一个键值对后面的逗号
+    NSRange range = [string rangeOfString:@"," options:NSBackwardsSearch];
+    if (range.location != NSNotFound) {
+        [string deleteCharactersInRange:range];
+    }
+    return string;
+}
+
 @end
 
 /**

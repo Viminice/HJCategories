@@ -45,6 +45,7 @@
 		6F2289E61E8CE2D600BD603E /* NSTimer+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289E51E8CE2D600BD603E /* NSTimer+HJExtension.m */; };
 		6F2289E91E8CE36000BD603E /* NSDate+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289E81E8CE36000BD603E /* NSDate+HJExtension.m */; };
 		6F2289EC1E8CE42800BD603E /* NSDictionary+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289EB1E8CE42800BD603E /* NSDictionary+HJExtension.m */; };
+		6F2289EF1E8CEC1100BD603E /* UITextField+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289EE1E8CEC1100BD603E /* UITextField+HJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,8 @@
 		6F2289E81E8CE36000BD603E /* NSDate+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HJExtension.m"; sourceTree = "<group>"; };
 		6F2289EA1E8CE42800BD603E /* NSDictionary+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HJExtension.h"; sourceTree = "<group>"; };
 		6F2289EB1E8CE42800BD603E /* NSDictionary+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HJExtension.m"; sourceTree = "<group>"; };
+		6F2289ED1E8CEC1100BD603E /* UITextField+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HJExtension.h"; sourceTree = "<group>"; };
+		6F2289EE1E8CEC1100BD603E /* UITextField+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				6F2135D31E8CA36000B8DC36 /* UIScrollView+HJExtension.m */,
 				6F2135D41E8CA36000B8DC36 /* UIView+HJExtension.h */,
 				6F2135D51E8CA36000B8DC36 /* UIView+HJExtension.m */,
+				6F2289ED1E8CEC1100BD603E /* UITextField+HJExtension.h */,
+				6F2289EE1E8CEC1100BD603E /* UITextField+HJExtension.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				6F2136151E8CA36B00B8DC36 /* MJRefreshAutoNormalFooter.m in Sources */,
 				6F2136161E8CA36B00B8DC36 /* MJRefreshAutoStateFooter.m in Sources */,
 				6F2136211E8CA36B00B8DC36 /* UIScrollView+MJRefresh.m in Sources */,
+				6F2289EF1E8CEC1100BD603E /* UITextField+HJExtension.m in Sources */,
 				6F2135DB1E8CA36000B8DC36 /* UIColor+HJExtension.m in Sources */,
 				6F2135DD1E8CA36000B8DC36 /* UIImage+HJExtension.m in Sources */,
 				6F2136171E8CA36B00B8DC36 /* MJRefreshBackGifFooter.m in Sources */,

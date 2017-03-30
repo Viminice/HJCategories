@@ -10,28 +10,11 @@
  *                  每晚灯火阑珊处，夜难寐，加班狂。
  */
 
-#import "NSArray+HJExtension.h"
+#import <UIKit/UIKit.h>
 
-@implementation NSArray (HJExtension)
+@interface UITextField (HJExtension)
 
-+ (NSArray *)hj_arrayFromPlist:(NSString *)plist {
-    return [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:plist ofType:nil]];
-}
-
-- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    NSMutableString *string = [NSMutableString string];
-    [string appendString:@"[\n"];
-    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [string appendFormat:@"%@,\n",obj];
-    }];
-    [string appendString:@"]"];
-    // 删除最后的","
-    NSRange range = [string rangeOfString:@"," options:NSBackwardsSearch];
-    if (range.location != NSNotFound) {
-        [string deleteCharactersInRange:range];
-    }
-    return string;
-}
+@property (strong, nonatomic) UIColor *hj_placeholderColor;
 
 @end
 

@@ -10,27 +10,27 @@
  *                  每晚灯火阑珊处，夜难寐，加班狂。
  */
 
-#import "NSArray+HJExtension.h"
+#import "UITextField+HJExtension.h"
 
-@implementation NSArray (HJExtension)
+@implementation UITextField (HJExtension)
 
-+ (NSArray *)hj_arrayFromPlist:(NSString *)plist {
-    return [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:plist ofType:nil]];
+- (void)setHj_placeholderColor:(UIColor *)hj_placeholderColor {
+    if (hj_placeholderColor == nil) return;
+    // 确保创建出placeholderLabel
+    if (self.placeholder == nil) {
+        self.placeholder = @" ";
+    }
+    UILabel *placeholder = [self valueForKey:@"placeholderLabel"];
+    placeholder.textColor = hj_placeholderColor;
 }
 
-- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    NSMutableString *string = [NSMutableString string];
-    [string appendString:@"[\n"];
-    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [string appendFormat:@"%@,\n",obj];
-    }];
-    [string appendString:@"]"];
-    // 删除最后的","
-    NSRange range = [string rangeOfString:@"," options:NSBackwardsSearch];
-    if (range.location != NSNotFound) {
-        [string deleteCharactersInRange:range];
+- (UIColor *)hj_placeholderColor {
+    if ([self valueForKey:@"placeholderLabel"]) {
+        UILabel *placeholder = [self valueForKey:@"placeholderLabel"];
+        return placeholder.textColor;
+    }else {
+        return nil;
     }
-    return string;
 }
 
 @end
