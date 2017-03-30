@@ -22,7 +22,7 @@ static inline NSUInteger hj_hexStrToInt(NSString *str) {
 }
 
 static BOOL hj_hexStrToRGBA(NSString *str,
-                         CGFloat *r, CGFloat *g, CGFloat *b, CGFloat *a) {
+                            CGFloat *r, CGFloat *g, CGFloat *b, CGFloat *a) {
     str = [[str hj_stringByTrim] uppercaseString];
     if ([str hasPrefix:@"#"]) {
         str = [str substringFromIndex:1];
@@ -59,6 +59,17 @@ static BOOL hj_hexStrToRGBA(NSString *str,
         return [UIColor colorWithRed:r green:g blue:b alpha:a];
     }
     return nil;
+}
+
++ (UIColor *)hj_randomColor {
+    unsigned int r, g, b;
+    r = arc4random_uniform(256);
+    g = arc4random_uniform(256);
+    b = arc4random_uniform(256);
+    return [UIColor colorWithRed:r / 255.0f
+                           green:g / 255.0f
+                            blue:b / 255.0f
+                           alpha:1.0f];
 }
 
 @end

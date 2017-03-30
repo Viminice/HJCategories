@@ -31,14 +31,12 @@
 }
 
 - (UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius {
-    return [self hj_imageByRoundCornerRadius:radius
-                                 borderWidth:0
-                                 borderColor:nil];
+    return [self hj_imageByRoundCornerRadius:radius borderWidth:0 borderColor:nil];
 }
 
 - (UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius
                              borderWidth:(CGFloat)borderWidth
-                             borderColor:(nullable UIColor *)borderColor {
+                             borderColor:(UIColor *)borderColor {
     return [self hj_imageByRoundCornerRadius:radius
                                      corners:UIRectCornerAllCorners
                                  borderWidth:borderWidth
@@ -49,8 +47,9 @@
 - (UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius
                                  corners:(UIRectCorner)corners
                              borderWidth:(CGFloat)borderWidth
-                             borderColor:(nullable UIColor *)borderColor
+                             borderColor:(UIColor *)borderColor
                           borderLineJoin:(CGLineJoin)borderLineJoin {
+    
     if (corners != UIRectCornerAllCorners) {
         UIRectCorner tmp = 0;
         if (corners & UIRectCornerTopLeft) tmp |= UIRectCornerBottomLeft;
@@ -95,6 +94,10 @@
     return image;
 }
 
++ (UIImage *)hj_originalImageNamed:(NSString *)imageName {
+    return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 - (UIImage *)hj_imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize {
     size_t width = (size_t)CGImageGetWidth(self.CGImage);
     size_t height = (size_t)CGImageGetHeight(self.CGImage);
@@ -133,10 +136,6 @@
 
 - (UIImage *)hj_imageByRotateRight90 {
     return [self hj_imageByRotate:- 90 * M_PI / 180 fitSize:YES];
-}
-
-+ (UIImage *)hj_originalImageNamed:(NSString *)imageName {
-    return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 @end

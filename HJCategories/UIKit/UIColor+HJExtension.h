@@ -16,8 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (HJExtension)
 
-/** 十六进制颜色转UIColor */
+/**
+ *  十六进制字符串转UIColor
+ */
 + (nullable UIColor *)hj_colorWithHexString:(NSString *)hexStr;
+
+/**
+ *  随机色
+ */
++ (UIColor *)hj_randomColor;
 
 @end
 

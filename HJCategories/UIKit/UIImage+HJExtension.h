@@ -16,28 +16,39 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (HJExtension)
 
-#pragma mark - Image Create
-/** 根据颜色生成图片 */
+#pragma mark - Create image
+
+/**
+ *  根据颜色生成图片
+ */
 + (nullable UIImage *)hj_imageWithColor:(UIColor *)color;
 
-/** 根据颜色生成图片 */
+/**
+ *  根据颜色生成图片
+ */
 + (nullable UIImage *)hj_imageWithColor:(UIColor *)color size:(CGSize)size;
 
-#pragma mark - Image Modify
-/** 设置圆角 */
+#pragma mark - Modify Image
+
+/**
+ *  设置图片的圆角,边框,边框颜色
+ */
 - (nullable UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius;
 
-/** 设置圆角,边框 */
 - (nullable UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius
-                                   borderWidth:(CGFloat)borderWidth
-                                   borderColor:(nullable UIColor *)borderColor;
+                                      borderWidth:(CGFloat)borderWidth
+                                      borderColor:(nullable UIColor *)borderColor;
 
-/** 设置圆角,边框 */
 - (nullable UIImage *)hj_imageByRoundCornerRadius:(CGFloat)radius
-                                       corners:(UIRectCorner)corners
-                                   borderWidth:(CGFloat)borderWidth
-                                   borderColor:(nullable UIColor *)borderColor
-                                borderLineJoin:(CGLineJoin)borderLineJoin;
+                                          corners:(UIRectCorner)corners
+                                      borderWidth:(CGFloat)borderWidth
+                                      borderColor:(nullable UIColor *)borderColor
+                                   borderLineJoin:(CGLineJoin)borderLineJoin;
+
+/**
+ *  设置图片不被渲染
+ */
++ (nullable UIImage *)hj_originalImageNamed:(NSString *)imageName;
 
 /** 逆时针旋转 */
 - (nullable UIImage *)hj_imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize;
@@ -47,9 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 顺时针旋转90° */
 - (nullable UIImage *)hj_imageByRotateRight90;
-
-/** 设置图片不被渲染 */
-+ (nullable UIImage *)hj_originalImageNamed:(NSString *)imageName;
 
 @end
 

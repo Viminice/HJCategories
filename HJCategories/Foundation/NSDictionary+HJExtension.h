@@ -10,15 +10,35 @@
  *                  每晚灯火阑珊处，夜难寐，加班狂。
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-typedef void(^HJTouchedButtonBlock)(NSInteger);
-@interface UIButton (HJExtension)
+NS_ASSUME_NONNULL_BEGIN
 
-/** 按钮点击事件 */
-- (void)hj_addActionHandler:(HJTouchedButtonBlock)touchHandler;
+@interface NSDictionary (HJExtension)
+
+/**
+ *  是否包含某个值
+ */
+- (BOOL)hj_containsObjectForKey:(id)key;
+
+/**
+ *  字典转换为JSON字符串
+ */
+- (nullable NSString *)hj_jsonStringEncoded;
+
+/**
+ *  字典转换为JSON字符串,有格式
+ */
+- (nullable NSString *)hj_jsonPrettyStringEncoded;
+
+/**
+ *  XML转字典
+ */
++ (nullable NSDictionary *)hj_dictionaryWithXML:(id)xmlDataOrString;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 /**
  *                       .::::.

@@ -10,13 +10,19 @@
  *                  每晚灯火阑珊处，夜难寐，加班狂。
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-typedef void(^HJTouchedButtonBlock)(NSInteger);
-@interface UIButton (HJExtension)
+@interface NSTimer (HJExtension)
 
-/** 按钮点击事件 */
-- (void)hj_addActionHandler:(HJTouchedButtonBlock)touchHandler;
+/**
+ *  创建一个定时器加入到当前runloop,default模式
+ */
++ (NSTimer *)hj_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
+
+/**
+ *  创建一个定时器,必须自己加到runloop
+ */
++ (NSTimer *)hj_timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer *timer))block repeats:(BOOL)repeats;
 
 @end
 

@@ -42,6 +42,9 @@
 		6F2136201E8CA36B00B8DC36 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21360A1E8CA36B00B8DC36 /* UIScrollView+MJExtension.m */; };
 		6F2136211E8CA36B00B8DC36 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21360C1E8CA36B00B8DC36 /* UIScrollView+MJRefresh.m */; };
 		6F2136221E8CA36B00B8DC36 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F21360E1E8CA36B00B8DC36 /* UIView+MJExtension.m */; };
+		6F2289E61E8CE2D600BD603E /* NSTimer+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289E51E8CE2D600BD603E /* NSTimer+HJExtension.m */; };
+		6F2289E91E8CE36000BD603E /* NSDate+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289E81E8CE36000BD603E /* NSDate+HJExtension.m */; };
+		6F2289EC1E8CE42800BD603E /* NSDictionary+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2289EB1E8CE42800BD603E /* NSDictionary+HJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +117,12 @@
 		6F21360C1E8CA36B00B8DC36 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		6F21360D1E8CA36B00B8DC36 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		6F21360E1E8CA36B00B8DC36 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		6F2289E41E8CE2D600BD603E /* NSTimer+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+HJExtension.h"; sourceTree = "<group>"; };
+		6F2289E51E8CE2D600BD603E /* NSTimer+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+HJExtension.m"; sourceTree = "<group>"; };
+		6F2289E71E8CE36000BD603E /* NSDate+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HJExtension.h"; sourceTree = "<group>"; };
+		6F2289E81E8CE36000BD603E /* NSDate+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HJExtension.m"; sourceTree = "<group>"; };
+		6F2289EA1E8CE42800BD603E /* NSDictionary+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HJExtension.h"; sourceTree = "<group>"; };
+		6F2289EB1E8CE42800BD603E /* NSDictionary+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HJExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +199,12 @@
 				6F2135C51E8CA36000B8DC36 /* NSNumber+HJExtension.m */,
 				6F2135C61E8CA36000B8DC36 /* NSString+HJExtension.h */,
 				6F2135C71E8CA36000B8DC36 /* NSString+HJExtension.m */,
+				6F2289E41E8CE2D600BD603E /* NSTimer+HJExtension.h */,
+				6F2289E51E8CE2D600BD603E /* NSTimer+HJExtension.m */,
+				6F2289E71E8CE36000BD603E /* NSDate+HJExtension.h */,
+				6F2289E81E8CE36000BD603E /* NSDate+HJExtension.m */,
+				6F2289EA1E8CE42800BD603E /* NSDictionary+HJExtension.h */,
+				6F2289EB1E8CE42800BD603E /* NSDictionary+HJExtension.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -390,6 +405,7 @@
 				6F2136141E8CA36B00B8DC36 /* MJRefreshAutoGifFooter.m in Sources */,
 				6F21361A1E8CA36B00B8DC36 /* MJRefreshGifHeader.m in Sources */,
 				6F2135DE1E8CA36000B8DC36 /* UIScrollView+HJExtension.m in Sources */,
+				6F2289E61E8CE2D600BD603E /* NSTimer+HJExtension.m in Sources */,
 				6F2135AC1E8CA31900B8DC36 /* AppDelegate.m in Sources */,
 				6F2135D71E8CA36000B8DC36 /* NSData+HJExtension.m in Sources */,
 				6F2136121E8CA36B00B8DC36 /* MJRefreshFooter.m in Sources */,
@@ -405,6 +421,8 @@
 				6F21361C1E8CA36B00B8DC36 /* MJRefreshStateHeader.m in Sources */,
 				6F2136201E8CA36B00B8DC36 /* UIScrollView+MJExtension.m in Sources */,
 				6F2136191E8CA36B00B8DC36 /* MJRefreshBackStateFooter.m in Sources */,
+				6F2289EC1E8CE42800BD603E /* NSDictionary+HJExtension.m in Sources */,
+				6F2289E91E8CE36000BD603E /* NSDate+HJExtension.m in Sources */,
 				6F21361E1E8CA36B00B8DC36 /* MJRefreshConst.m in Sources */,
 				6F2135DF1E8CA36000B8DC36 /* UIView+HJExtension.m in Sources */,
 				6F2135A91E8CA31900B8DC36 /* main.m in Sources */,

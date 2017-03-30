@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSNumber (HJExtension)
 
+/**
+ *  字符串转换为NSNumber
+ */
 + (nullable NSNumber *)hj_numberWithString:(NSString *)string;
 
 @end

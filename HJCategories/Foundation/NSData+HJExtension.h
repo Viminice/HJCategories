@@ -16,15 +16,59 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSData (HJExtension)
 
+/**
+ *  MD2加密
+ */
+- (NSString *)hj_md2String;
+
+/**
+ *  MD4加密
+ */
+- (NSString *)hj_md4String;
+
+/**
+ *  MD5加密
+ */
 - (NSString *)hj_md5String;
 
-/** BASE64编码 */
+/**
+ *  SHA1加密
+ */
+- (NSString *)hj_sha1String;
+
+/**
+ *  SHA224加密
+ */
+- (NSString *)hj_sha224String;
+
+/**
+ *  SHA256加密
+ */
+- (NSString *)hj_sha256String;
+
+/**
+ *  SHA384加密
+ */
+- (NSString *)hj_sha384String;
+
+/**
+ *  SHA512加密
+ */
+- (NSString *)hj_sha512String;
+
+/**
+ *  BASE64编码
+ */
 - (nullable NSString *)hj_base64EncodedString;
 
-/** BASE64解码 */
+/**
+ *  BASE64解码
+ */
 + (nullable NSData *)hj_dataWithBase64EncodedString:(NSString *)base64EncodedString;
 
-/** 转换为json */
+/**
+ *  转换为json
+ */
 - (nullable id)hj_jsonValueDecoded;
 
 @end

@@ -19,5 +19,8 @@
 #import "NSData+HJExtension.h"
 #import "NSNumber+HJExtension.h"
 #import "NSString+HJExtension.h"
+#import "NSTimer+HJExtension.h"
+#import "NSDate+HJExtension.h"
+#import "NSDictionary+HJExtension.h"
 
 #endif /* HJCategories_h */

@@ -10,13 +10,24 @@
  *                  每晚灯火阑珊处，夜难寐，加班狂。
  */
 
-#import <UIKit/UIKit.h>
+#import "NSTimer+HJExtension.h"
 
-typedef void(^HJTouchedButtonBlock)(NSInteger);
-@interface UIButton (HJExtension)
+@implementation NSTimer (HJExtension)
 
-/** 按钮点击事件 */
-- (void)hj_addActionHandler:(HJTouchedButtonBlock)touchHandler;
++ (void)_hj_ExecBlock:(NSTimer *)timer {
+    if ([timer userInfo]) {
+        void (^block)(NSTimer *timer) = (void (^)(NSTimer *timer))[timer userInfo];
+        block(timer);
+    }
+}
+
++ (NSTimer *)hj_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer * _Nonnull))block repeats:(BOOL)repeats {
+    return [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(_hj_ExecBlock:) userInfo:[block copy] repeats:repeats];
+}
+
++ (NSTimer *)hj_timerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(NSTimer * _Nonnull))block repeats:(BOOL)repeats {
+    return [NSTimer timerWithTimeInterval:seconds target:self selector:@selector(_hj_ExecBlock:) userInfo:[block copy] repeats:repeats];
+}
 
 @end
 

@@ -14,13 +14,44 @@
 
 @interface UIScrollView (HJExtension)
 
+/**
+ *  滚动到顶部
+ */
 - (void)hj_scrollToTop;
+
+/**
+ *  滚动到底部
+ */
 - (void)hj_scrollToBottom;
+
+/**
+ *  滚动到左边
+ */
 - (void)hj_scrollToLeft;
+
+/**
+ *  滚动到右边
+ */
 - (void)hj_scrollToRight;
+
+/**
+ *  滚动到顶部,是否有动画
+ */
 - (void)hj_scrollToTopAnimated:(BOOL)animated;
+
+/**
+ *  滚动到底部,是否有动画
+ */
 - (void)hj_scrollToBottomAnimated:(BOOL)animated;
+
+/**
+ *  滚动到左边,是否有动画
+ */
 - (void)hj_scrollToLeftAnimated:(BOOL)animated;
+
+/**
+ *  滚动到右边,是否有动画
+ */
 - (void)hj_scrollToRightAnimated:(BOOL)animated;
 
 /**
