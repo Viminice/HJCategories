@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HJCategories"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "常用分类"
   s.homepage     = "https://github.com/shusheng732/HJCategories"
   s.license      = "MIT"
