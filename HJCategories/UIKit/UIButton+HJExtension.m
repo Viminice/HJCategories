@@ -25,11 +25,11 @@ static const void *hj_btnClickBlockKey = "hj_btnClickBlockKey";
 - (void)hj_blockActionTouched:(UIButton *)btn{
     HJTouchedButtonBlock block = objc_getAssociatedObject(self, hj_btnClickBlockKey);
     if (block) {
-        self.enabled = NO; // 防止按钮重复点击
+        self.userInteractionEnabled = NO; // 防止按钮重复点击
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             block(btn.tag);
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                self.enabled = YES;
+                self.userInteractionEnabled = YES;
             });
         });
     }
